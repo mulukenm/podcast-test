@@ -24,6 +24,7 @@ jobs:
           git commit -m "Modified Feed"
           git push 
       - name: Commit changes
+        continue-on-error: true
         run: |
           git add .
           if git diff-index --quiet HEAD --; then
